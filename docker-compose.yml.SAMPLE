@@ -1,0 +1,13 @@
+version: "3"
+services:
+  jitsi:
+    image: gpopesc/jitsi-token
+    container_name: jitsi-token
+    environment:
+      - TZ=$TZ
+      - USER_NAME=$USER_NAME
+      - USER_PASSWORD=$USER_PASS  
+    ports:
+      - $API_PORT:9000   
+      - $HTTPPORT:80
+    restart: always

@@ -1,0 +1,33 @@
+<?php
+
+//jitsi variables
+$jitsi_server = "https://your.jitsi.server/";
+$jwt_alg      = "HS256";
+$jwt_secret   = "your_jwt_pass";
+$jwt_iss      = "your_jwt_username";
+$jwt_aud      = "myapp";
+$jwt_exp      = 3600;
+$jwt_sub      = "*";
+
+//email server variables
+$email_server    = "your.email.server";
+$email_port      = "465"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
+$smtpauth        = true;
+$smtpsecure      = "ssl"; //ssl or tls
+$email_username  = "smtp_username";
+$email_pass      = "smtp_pass";
+$sender_email    = "john@doe.com";
+$sender_name     = "John Doe";
+$email_signature = "Admin TEAM";
+
+/* Yourls variables (optional) ---> YOURLS stands for Your Own URL Shortener <--- 
+It is a small set of PHP scripts that will allow you to run your own URL shortening service (a la TinyURL or Bitly).
+Visit https://yourls.org/#Install for more details */
+
+$yrl_username = 'username';
+$yrl_password = 'pass';
+$yrl_api_url  = 'https://yourls.server.com/yourls-api.php';
+
+// server address where jwt docker container will be hosted -optional
+$jwt_server_name = 'https://jitsi-jwt.server.com'
+?>
