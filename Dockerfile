@@ -25,7 +25,7 @@ RUN apt-get update && apt-get -y install unzip \
  #     gnupg2 \
       nano \
       tzdata \
-      supervisor \
+#      supervisor \
       procps \
       sudo \
       nano \
@@ -48,6 +48,6 @@ COPY ./vars.php /tmp/smtp/
 COPY ./script/* /tmp/script/
 COPY startup.sh /
 RUN chmod +x /startup.sh
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 CMD ["/startup.sh"]
-#CMD ["/usr/bin/supervisord"]
+
