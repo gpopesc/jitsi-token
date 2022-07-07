@@ -1,4 +1,4 @@
 # jitsi-token
 generate jitsi jwt token
-image v.2
+image v.2  
 
