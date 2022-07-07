@@ -13,7 +13,27 @@ ENV DEBIAN_FRONTEND=${DF} \
     USER_NAME=${USER_NAME} \
     USER_PASSWORD=${USER_PASSWORD} \
     UID=1000 \
-    GID=1000
+    GID=1000 \
+    JITSI_SERVER=${JITSI_SERVER} \
+    JWT_ALG=${JWT_ALG} \
+    JWT_SECRET=${JWT_SECRET} \
+    JWT_ISS=${JWT_ISS} \
+    JWT_AUD=${JWT_AUD} \
+    JWT_EXP=${JWT_EXP} \
+    JWT_SUB=${JWT_SUB} \
+    EMAIL_SERVER=${EMAIL_SERVER} \
+    EMAIL_PORT=${EMAIL_PORT} \
+    SMTPAUTH=${SMTPAUTH} \
+    SMTPSECURE=${SMTPSECURE} \
+    EMAIL_USERNAME=${EMAIL_USERNAME} \
+    EMAIL_PASS=${EMAIL_PASS} \
+    SENDER_EMAIL=${SENDER_EMAIL} \
+    SENDER_NAME=${SENDER_NAME} \
+    EMAIL_SIGNATURE=${EMAIL_SIGNATURE} \
+    YRL_USERNAME=${YRL_USERNAME} \
+    YRL_PASSWORD=${YRL_PASSWORD} \
+    YRL_API_URL=${YRL_API_URL} \
+    JWT_SERVER_NAME=${JWT_SERVER_NAME}
 
 
 
@@ -22,16 +42,13 @@ RUN apt-get update && apt-get -y install unzip \
       wget \
       curl \
       apt-utils \
- #     gnupg2 \
       nano \
       tzdata \
-#      supervisor \
       procps \
       sudo \
       nano \
       apache2 \
       php7.4 \
-#      php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl \
       php7.4-common php7.4-curl php7.4-cli php7.4-dev php7.4-opcache php7.4-zip php7.4-intl \
    && rm -rf /var/lib/apt/lists/*
 
@@ -44,7 +61,6 @@ HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://127.0.0.1:80
 #config files to temp location
 RUN mkdir /tmp/script/ && mkdir /tmp/smtp/
 COPY ./smtp/* /tmp/smtp/
-COPY ./vars.php.SAMPLE /tmp/smtp/
 COPY ./script/* /tmp/script/
 COPY startup.sh /
 RUN chmod +x /startup.sh
