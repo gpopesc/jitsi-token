@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: user/jitsi:latest
+          tags: gpopesc/jitsi-token:latest
