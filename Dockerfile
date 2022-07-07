@@ -44,7 +44,7 @@ HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://127.0.0.1:80
 #config files to temp location
 RUN mkdir /tmp/script/ && mkdir /tmp/smtp/
 COPY ./smtp/* /tmp/smtp/
-COPY ./vars.php /tmp/smtp/
+COPY ./vars.php.SAMPLE /tmp/smtp/
 COPY ./script/* /tmp/script/
 COPY startup.sh /
 RUN chmod +x /startup.sh
