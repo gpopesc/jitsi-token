@@ -9,7 +9,7 @@ on:
 
 jobs:
   docker:
-    runs-on: debian-buster
+    runs-on: ubuntu-focal
     steps:
       -
         name: Set up QEMU
