@@ -1,6 +1,6 @@
 # JWT token generator for Jitsi meetings in docker
 
-The original project is in the link bellow, I just modify the interface and I added into docker container for symplicity.
+The original project is in the link bellow, I just modify the interface and I added into docker container for simplicity.
 [https://github.com/emrahcom/emrah-tools](https://github.com/emrahcom/emrah-tools)
 
 
