@@ -41,12 +41,11 @@ ENV DEBIAN_FRONTEND=${DF} \
 RUN apt-get update && apt-get -y install unzip \
       wget \
       curl \
-      apt-utils \
-      nano \
+#      apt-utils \
+#      nano \
       tzdata \
-      procps \
+#      procps \
       sudo \
-      nano \
       apache2 \
       php7.4 \
       php7.4-common php7.4-curl php7.4-cli php7.4-dev php7.4-opcache php7.4-zip php7.4-intl \
