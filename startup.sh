@@ -19,6 +19,14 @@ if [ -n "${USER_NAME}" ]
   chmod 755 -R /var/www/html/*
   rm -v /var/www/html/smtp-html.zip.tar.xz
   a2enmod rewrite
+  
+  tee -a /etc/apache2/sites-available/000-default.conf << EOF
+<Directory /var/www/html>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+</Directory>
+EOF
 
   sh /home/${USER_NAME}/script/deno.sh
   if [ -e "/home/${USER_NAME}/.bashrc" ]
