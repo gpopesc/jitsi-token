@@ -1,7 +1,8 @@
 # JWT token generator for Jitsi meetings in docker
 
 #docker
-For docker installation just download and rename the 2 files from above: *docker-compose.yml.SAMPLE* and *.env.SAMPLE* and rename them to *docker-compose.yml* and *.env* Adjust your variables accordingly in .env file, then run the *docker-compose up -d*, then access the interface from your browser.
+
+For docker installation just download the 2 files from above: *docker-compose.yml.SAMPLE* and *.env.SAMPLE* and rename them to *docker-compose.yml* and *.env* Adjust your variables accordingly in .env file, then run the *docker-compose up -d*, and access the interface from your browser.
 
 #API
 ```
