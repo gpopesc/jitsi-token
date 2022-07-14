@@ -2,7 +2,7 @@
 
 #docker
 
-For docker installation just download the 2 files from above: *docker-compose.yml.SAMPLE* and *.env.SAMPLE* and rename them to *docker-compose.yml* and *.env* Adjust your variables accordingly in .env file, then run the *docker-compose up -d*, and access the interface from your browser.
+For docker installation just download the 2 files from above: *docker-compose.yml.SAMPLE* and *.env.SAMPLE* and rename them to *docker-compose.yml* and *.env* Adjust your variables accordingly in .env file, then run the *docker-compose up -d*, and access the interface from your browser. Use reverse proxy to seure your connection, if you want to make available from internet
 
 #API
 ```
