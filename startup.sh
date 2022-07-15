@@ -4,10 +4,6 @@ exec >> /tmp/start.log 2>&1
 
 echo "Running as user ${USER_NAME} with id ${UID} and groupid ${GID}"
 
-cp /tmp/smtp/* /var/www/html
-tar -xf /var/www/html/smtp-html.zip.tar.xz
-rm -v /var/www/html/smtp-html.zip.tar.xz
-mkdir /var/www/html/script/ && cp /tmp/script/* /var/www/html/script/ #&& chmod 775 -R /var/www/html/script/*
 
 a2enmod rewrite
 

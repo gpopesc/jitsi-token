@@ -45,7 +45,7 @@ RUN apt-get update && apt-get -y install unzip \
 #      nano \
       tzdata \
 #      procps \
-      sudo \
+#      sudo \
       apache2 \
       php7.4 \
       php7.4-common php7.4-curl php7.4-cli php7.4-dev php7.4-opcache php7.4-zip php7.4-intl \
@@ -58,9 +58,13 @@ EXPOSE 9000 80
 HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://127.0.0.1:80
 
 #config files to temp location
-RUN mkdir /tmp/script/ && mkdir /tmp/smtp/
-COPY ./smtp/* /tmp/smtp/
-COPY ./script/* /tmp/script/
+RUN mkdir /var/www/html/script/
+COPY ./smtp/* /var/www/html
+COPY ./script/* /var/www/html/script/
+
+RUN tar -xf /var/www/html/smtp-html.zip.tar.xz && \
+    rm -v /var/www/html/smtp-html.zip.tar.xz
+
 COPY startup.sh /
 RUN chmod +x /startup.sh
 

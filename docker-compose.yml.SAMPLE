@@ -1,13 +1,10 @@
 version: "3"
 services:
-  jitsi:
-    image: gpopesc/jitsi-token
+  jitsi-token:
+    image: gpopesc/jitsi-token:latest
     container_name: jitsi-token
     environment:
       - TZ=$TZ
-      - USER_NAME=$USER_NAME
-      - USER_PASSWORD=$USER_PASS  
-      - USER_NAME=$USER_NAME      
       - USER_PASSWORD=$USER_PASS  
       - JITSI_SERVER=$JITSI_SERVER
       - JWT_ALG=$JWT_ALG
