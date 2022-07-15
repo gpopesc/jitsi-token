@@ -18,3 +18,4 @@ The original project is in the link bellow, I just modify the interface and I ad
 
 
 Install your jitsi meeting in docker from here: https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker/
+
